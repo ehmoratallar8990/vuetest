@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,5 +19,13 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
     "vite": "^6.3.5"
-  }
+  },
+  "files": [
+    "dist",
+    "server.js",
+    "public",
+    "src",
+    "index.html",
+    "vite.config.js"
+  ]
 }
