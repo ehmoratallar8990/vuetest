@@ -4,17 +4,11 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy source code
+# Copy all source code first (needed for postinstall build)
 COPY . .
 
-# Build the application
-RUN npm run build
+# Install dependencies (this will trigger postinstall build)
+RUN npm install
 
 # Expose port
 EXPOSE 3850
